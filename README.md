@@ -146,4 +146,4 @@ git pull origin main
 git push origin main
 ```
 
-* En documentos anteriores a 2021, se puede var la rama principal referenciada como "master" en vez de "main"
+* En documentos anteriores a 2021, se puede ver la rama principal referenciada como "master" en vez de "main"
