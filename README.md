@@ -147,3 +147,45 @@ git push origin main
 ```
 
 * En documentos anteriores a 2021, se puede ver la rama principal referenciada como "master" en vez de "main"
+
+## Trabajar con ramas (branches)
+Lo más normal es no trabajar en la rama principal "main" y crear una rama de ésta para hacer nuestros cambios. Con los cambios hechos, el paso mas común es unificar nuestra rama con la principal.
+
+Primero creamos la rama con el comando `git branch`:
+```bash
+git branch new_branch
+```
+
+Nos aseguramos en que rama estamos y vamos a la nuestra si no está en la correcta con el comando `git checkout new_branch`:
+```bash
+git branch
+git checkout new_branch
+```
+
+Una vez hemos hecho los cambios pertinentes en nuestra rama, podemos unificarla con la principal con el comando `git merge`:
+```bash
+git merge new_branch
+```
+
+Si no queremos mantener la rama, también podemos borrarla con:
+```bash
+git branch -d new_branch
+```
+
+## Uso de 'Tags' (etiquetas)
+Con los tags podemos hacer versiones de nuestro proyecto. El comando b
+sico es `git tag`. Se usan mucho también para activar pipelines que ejecutan acciones de forma automática:
+```bash
+git tag VersionAlfa -m "Versión alfa"
+git tag
+```
+
+Para mostrar la información de un tag especifico usaremos `git show`:
+```bash
+git show VersionAlfa
+```
+
+Podemos tambien borrarlas si fuese necesario:
+```bash
+git tag -d VersionAlfa
+```
